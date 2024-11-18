@@ -1,0 +1,60 @@
+WHAT IS DJANGO ?
+~~Django is a python framework for building scalable web application.
+~~Its has a lot of included features for easy and fast development.
+CHECK OUT THEIR OFFICIAL WEBSITE -> https://www.djangoproject.com/
+
+GETTING STARTED WITH DJANGO
+~~Since Django is a PYTHON framework you need to have a python 3.x installed on you machine :
+  *******PYTHON INSTALLATION*****
+    ->Windows :
+        open cmd -> win + r then type cmd
+        type ->winget install python
+        verify installation -> python --version
+
+    ->linux and mac :
+        open terminal -> ctrl + alt + t(debian distros)
+        type ->sudo apt install python3
+        verify installation -> python3 --version
+~~Once python is set-up you can proceed to have get started with django
+  GETTING STARTED WITH DJANGO(SET-UP)
+~~The recommended way to set up django is through use of virtual environments (VENV). Which is just a folder that is you project.
+--This is to avoid compatibility issues incase you have an update in your machine resulting in missing dependencies and incompartible packages.
+
+CREATING A VIRTUAL ENVIRONMENT
+--STEP 1: CREATE A FOLDER e.g intro-to-django
+    ->cd into the folder
+--STEP 2:  CREATE THE VIRTUAL ENVIRONMENT
+    -> type : python -m venv <name-of-environment> OR python3 -m venv <name-of-environment>
+N.B -> this will install an interpreter specific to your project
+--STEP 3: ACTIVATE THE VIRTUAL ENVIRONMENT
+    -> Iside that folder navigate to :
+          1.windows -> cd <name-of-environment>\Scripts\activate
+          2.Linux/Mac  -> cd <name-of-environment>/bin/activate
+INSTALLING DJANGO
+Once the environment is setup you are ready to install DJANGO
+              <<<< INSTALLING DJANGO USING PIP >>>>>
+type -> python -m pip install Django
+this will install a django version compartible with the interpreter for this project.
+              <<<< VERIFICATION >>>>>
+On your shell enter the python shell -> python or python3
+      import django
+      print(django.get_version())
+ALTERNATIVELY :
+      -> type :  python -m django --version
+if you get a version then installation was successful.
+
+                FIRST DJANGO PROJECT
+~~Within your venv create a new django project :
+      -> type : django-admin startproject <name-of-project>
+#This creates a django project with this structure :
+      MAIN-FOLDER/
+    manage.py
+    Django-Project/
+        __init__.py
+        settings.py
+        urls.py
+        asgi.py
+        wsgi.py
+#That's how you setup a django project.
+#HAPPY CODING
+#DAY ONE DONE (^_^)
