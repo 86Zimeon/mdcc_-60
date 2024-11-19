@@ -1,0 +1,51 @@
+As we seen earlier after creating a Django project using :
+            django-admin startproject Myproject
+We get a file named Myproject with the following structure :
+        Myproject/
+          |-- manage.py
+          |-- Myproject/
+                |   |-- __init__.py
+                |   |-- settings.py
+                |   |-- urls.py
+                |   |-- wsgi.py          
+                |   |-- asgi.py
+
+            manage.py file
+    """
+    this file contains scripts that are used for local administrative task.
+    It is used for tasks such as migrations, starting servers etc.
+    It is the alternative of the django-admin within the project.
+
+            Myproject/
+        This is the inner main project folder.It contans all the project settings and configurations.
+        Some of its files are :
+                  -> init.py -> tells python to treat the folder as a python package.
+                  -> settings.py -> contains settings for all configurations such as the database settings, installed apps,middleware etc
+                  -> urls.py -> contains paths and patterns that map views with urls
+                  -> asgi.py -> this is a file used by django for compatibility and as such won't interact with.
+                  ->wsgi.py -> also file used for django background processes such as launching development servers etc
+  Since this is the main project folder, actual development will not happen in this folder but in other folders we create called APPS.
+  An app is a python package that enables yo to modularize your application by creating each features as an independent app.
+                CREATING AN APP
+              USE THE COMMAND : ->   python manage.py startapp Home
+    This creates an app directory with the following structure : 
+                Home/
+                  |   |-- __init__.py
+                  |   |-- admin.py
+                  |   |-- apps.py
+                  |   |-- models.py
+                  |   |-- tests.py
+                  |   |-- views.py
+                  |   |migrations/
+                          |   |-- __init__.py
+
+            ->admin.py -> register your models to make them accessible via the admin interface
+            ->app.py -> contains app configurations
+            ->models.py -> contains models for the database
+            ->tests.py -> tests are done in this file
+            ->views.py -> contains functions or classes that interact with the user.
+            ->migrations/ -> contains files used by django to track changes in models and apply them in database.
+  BEST PRACTICE :
+    ->Keep apps focused i.e have single purpose
+    ->use virtual environments
+    ->stick to one naming convention for ease in readability and consistency
